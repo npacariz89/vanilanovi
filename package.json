@@ -1,0 +1,24 @@
+{
+  "name": "vanilaWebsite",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "hooper": "^0.3.4",
+    "lodash.debounce": "^4.0.8",
+    "nuxt": "^2.0.0",
+    "vue-carousel": "^0.18.0",
+    "vue-click-outside": "^1.0.7",
+    "vue-responsive-video-background-player": "^1.0.6",
+    "vue-scroll": "^2.1.13",
+    "vue-video-background": "^0.1.2"
+  },
+  "devDependencies": {}
+}
