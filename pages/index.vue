@@ -1,11 +1,11 @@
 <template>
   <div>
-    <video v-if="renderComponent" autoplay muted loop id="myVideo">
-      <source :src="videUrl.video_url" type="video/mp4">
-    </video>
-    <div class="content">
+    <video-background :src="videUrl.video_url" style="height: 100vh;
+">
       <div class="vf-header">
-        <h1>Logo</h1>
+        <h1>
+          <nuxt-link class="vf-header-item" to="/work">Logo</nuxt-link>
+        </h1>
         <ul class="vf-header-navigation">
           <nuxt-link class="vf-header-item" to="/work">Work</nuxt-link>/
           <nuxt-link class="vf-header-item" to="/about_us">About us</nuxt-link>
@@ -27,7 +27,7 @@
           <p class="vf-client-name-year">{{videUrl.year}}</p>
         </div>
       </div>
-    </div>
+    </video-background>
   </div>
 </template>
 <script>
@@ -90,17 +90,11 @@ export default {
       this.forceRerender();
     }
   },
-  created() {
-    console.log("dasdsa");
-  },
   mounted() {
     this.changeSlide = debounce(function(value) {
       this.setSlide(value);
     }, 500);
-    console.log("dasdsa");
     if (window.addEventListener) {
-      console.log("dasdsa22");
-
       window.addEventListener("mousewheel", this.doScroll.bind(this), {
         passive: false
       });
